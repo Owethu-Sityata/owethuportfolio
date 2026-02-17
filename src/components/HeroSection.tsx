@@ -63,9 +63,8 @@ const HeroSection = () => {
             className="flex items-center gap-6"
           >
             <a
-              href="https://owethu-dev.infinityfreeapp.com/wp-content/uploads/2025/10/Owethu-Sityata_Full-Stack_CV-1.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/owethu_sityata_cv.pdf"
+              download="Owethu_Sityata_CV.pdf"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-mono text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Download CV
