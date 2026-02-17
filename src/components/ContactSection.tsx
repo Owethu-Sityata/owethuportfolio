@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Youtube, Send } from "lucide-react";
 import { useState } from "react";
-import contactImage from "@/assets/owethu-contact.png";
+import contactImage from "@/assets/owethu-contact.jpg";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -34,7 +34,7 @@ const ContactSection = () => {
             <img
               src={contactImage}
               alt="Owethu Sityata"
-              className="w-full h-full object-cover transition-all duration-700 cursor-pointer"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-primary/10" />
           </motion.div>
