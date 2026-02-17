@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Youtube, Send } from "lucide-react";
 import { useState } from "react";
-import contactImage from "@/assets/owethu-contact.jpg";
+import contactImage from "@/assets/owethu-contact.png";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
