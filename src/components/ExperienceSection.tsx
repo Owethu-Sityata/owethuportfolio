@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 const experiences = [
   { year: "Oct 2024 – Present", role: "Junior Web Developer", org: "LC Studio / Life Choices – Cape Town (Hybrid)", desc: "Started as a full-stack development trainee at Life Choices, progressed into a 6-month internship, and was promoted to Junior Developer (permanent) in December 2025." },
-  { year: "Apr – Sep 2024", role: "Full-Stack Coding Bootcamp", org: "Life Choices Academy", desc: "6-month intensive bootcamp covering full-stack development with hands-on project deliverables." },
+  { year: "Oct 2024 – Apr 2025", role: "Full-Stack Coding Bootcamp", org: "Life Choices Academy", desc: "6-month intensive bootcamp covering full-stack development with hands-on project deliverables." },
   { year: "2023 – 2024", role: "Customer Care", org: "IconAF", desc: "Refined communication and problem-solving under pressure." },
   { year: "2018 – 2023", role: "Tutoring (Volunteer)", org: "Ikamva Youth", desc: "Empowered learners through innovative teaching methods." },
   { year: "2017", role: "Matric (Bachelor Pass)", org: "Sinako High School", desc: "Completed National Senior Certificate with a bachelor pass." },
