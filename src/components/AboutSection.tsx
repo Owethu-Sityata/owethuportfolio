@@ -20,8 +20,7 @@ const AboutSection = () => (
           In 2023, I failed the Life Choices technical exam. That rejection sparked my determination. While working as a lead generator, I prepared and reapplied in 2024 — and got accepted.
         </p>
         <p>
-          I completed an intensive 6-month bootcamp, mastering PHP, Vue.js, and full-stack development. Now I'm working on client projects while studying Java OOP at{" "}
-          <span className="text-primary">IU International University</span>.
+          I completed an intensive 6-month bootcamp, mastering PHP, Vue.js, and full-stack development. Now I'm working on client projects and continuing to grow as a developer.
         </p>
 
         <div className="grid grid-cols-3 gap-4 pt-4">
