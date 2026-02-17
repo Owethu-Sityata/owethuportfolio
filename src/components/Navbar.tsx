@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const links = [
   { label: "About", href: "#about" },
@@ -13,12 +14,17 @@ const links = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <motion.nav
@@ -45,23 +51,31 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://owethu-dev.infinityfreeapp.com/wp-content/uploads/2025/10/Owethu-Sityata_Full-Stack_CV-1.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-mono border border-primary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-all"
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Toggle theme"
           >
-            Resume
-          </a>
+            {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
+          </button>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Toggle theme"
+          >
+            {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
+          </button>
+          <button
+            className="text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -84,14 +98,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="https://owethu-dev.infinityfreeapp.com/wp-content/uploads/2025/10/Owethu-Sityata_Full-Stack_CV-1.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-mono border border-primary text-primary px-4 py-2 rounded-md"
-              >
-                Resume
-              </a>
             </div>
           </motion.div>
         )}
