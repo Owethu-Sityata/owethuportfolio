@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
       {/* Subtle grid bg */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
         backgroundImage: "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
         backgroundSize: "60px 60px"
       }} />
