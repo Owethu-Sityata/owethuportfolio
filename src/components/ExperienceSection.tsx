@@ -2,11 +2,8 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 const experiences = [
-  { year: "2025 – Present", role: "Front-End Developer Intern", org: "LC STUDIO", desc: "Building, testing, and deploying web systems as part of agile teams solving real-world problems." },
-  { year: "2025", role: "BSc Software Development", org: "IU International University", desc: "Distance learning program in software engineering." },
-  { year: "2024 – 2025", role: "Coding Course (Full Stack)", org: "Life Choices Academy", desc: "6-month intensive bootcamp covering full-stack development with PHP, Vue.js, and project deliverables." },
+  { year: "Oct 2024 – Present", role: "Junior Web Developer", org: "LC Studio / Life Choices – Cape Town (Hybrid)", desc: "Started as a full-stack development trainee at Life Choices, progressed into a 6-month internship, and was promoted to Junior Developer (permanent) in December 2025." },
   { year: "2023 – 2024", role: "Customer Care", org: "IconAF", desc: "Refined communication and problem-solving under pressure." },
-  { year: "2019 – 2022", role: "Receiver", org: "SPAR Warehouse", desc: "Managed stock intake and dispatch, building discipline and logistical awareness." },
   { year: "2018 – 2023", role: "Tutoring (Volunteer)", org: "Ikamva Youth", desc: "Empowered learners through innovative teaching methods." },
 ];
 
