@@ -1,16 +1,30 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Youtube, Send } from "lucide-react";
+import { Github, Linkedin, Youtube, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import contactImage from "@/assets/owethu-contact.jpg";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Message from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
-    window.location.href = `mailto:sityatao5@gmail.com?subject=${subject}&body=${body}`;
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-email", {
+        body: formData,
+      });
+      if (error) throw error;
+      toast.success("Message sent! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error("Send error:", err);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -88,10 +102,11 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded-md font-mono text-sm hover:bg-primary hover:text-primary-foreground transition-all w-full justify-center"
+              disabled={sending}
+              className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded-md font-mono text-sm hover:bg-primary hover:text-primary-foreground transition-all w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send size={16} />
-              Send Message
+              {sending ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
+              {sending ? "Sending..." : "Send Message"}
             </button>
 
             <div className="flex justify-center gap-6 pt-4">
