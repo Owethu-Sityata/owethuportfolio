@@ -43,7 +43,7 @@ const projects = [
   {
     title: "Model Portfolio Website",
     desc: "Built a responsive portfolio website for a South African model, showcasing editorial work, brand collaborations, and cultural storytelling through a clean, modern layout.",
-    tech: ["shopify",". Tidio Live Chat", ". Theme Customization", ". E-commerce UX Optimization"],
+    tech: ["Generative AI",". Prompt Engineering", ". Lovable", ". TypeScript", ". Git"],
     img: snizzy,
     demo: "https://snizzyportfolio.netlify.app/",
     // figma: "https://www.figma.com/design/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity",
