@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Attendance Tracking System",
     desc: "Contributed as the front-end developer, focusing on UI styling and functionality. Expanded role to support backend development with PHP and MySQL.",
-    tech: ["Vue.js", "PHP", "MySQL", "HTML", "CSS"],
+    tech: ["Vue.js", ". PHP", ". MySQL", ". HTML", ". CSS"],
     img: attendance,
     demo: "https://youtu.be/YFE5qDqF8dg?si=W9YtYHi1DTfdeE63",
     github: "https://github.com/keanan557/Attendance-Tracking-System.git",
@@ -25,7 +25,15 @@ const projects = [
   {
     title: "Portfolio Brand Identity",
     desc: "Collaborative UI/UX design project creating responsive web and mobile interfaces. Delivered wireframes, prototypes, and a complete design system.",
-    tech: ["Figma", "UI/UX Design", "Prototyping", "Responsive Design"],
+    tech: ["Figma", ". UI/UX Design", ". Prototyping", ". Responsive Design"],
+    img: brand,
+    demo: "https://www.figma.com/proto/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity?node-id=12-547",
+    figma: "https://www.figma.com/design/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity",
+  },
+  {
+    title: "Shopify Dropshipping Store",
+    desc: "Built and launched a Shopify dropshipping store with custom theme design, organized products, and integrated live chat for better customer experience.",
+    tech: ["shopify",". Tidio Live Chat", ". Theme Customization", ". E-commerce UX Optimization"],
     img: brand,
     demo: "https://www.figma.com/proto/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity?node-id=12-547",
     figma: "https://www.figma.com/design/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity",
