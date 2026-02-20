@@ -5,6 +5,7 @@ import priceApp from "@/assets/project-price-app.png";
 import attendance from "@/assets/project-attendance.png";
 import brand from "@/assets/project-brand.png";
 import shopify from "@/assets/project-shopify.png";
+import snizzy from "@/assets/project-snizzy.png";
 
 const projects = [
   {
@@ -37,6 +38,14 @@ const projects = [
     tech: ["shopify",". Tidio Live Chat", ". Theme Customization", ". E-commerce UX Optimization"],
     img: shopify,
     demo: "https://loud420.co.za/",
+    // figma: "https://www.figma.com/design/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity",
+  },
+  {
+    title: "Model Portfolio Website",
+    desc: "Built a responsive portfolio website for a South African model, showcasing editorial work, brand collaborations, and cultural storytelling through a clean, modern layout.",
+    tech: ["shopify",". Tidio Live Chat", ". Theme Customization", ". E-commerce UX Optimization"],
+    img: snizzy,
+    demo: "https://snizzyportfolio.netlify.app/",
     // figma: "https://www.figma.com/design/Jh1LAi75QowgZrmov18kES/Portfolio-Brand-Identity",
   },
 ];
