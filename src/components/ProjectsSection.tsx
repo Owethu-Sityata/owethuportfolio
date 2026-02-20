@@ -4,6 +4,7 @@ import SectionHeading from "./SectionHeading";
 import priceApp from "@/assets/project-price-app.png";
 import attendance from "@/assets/project-attendance.png";
 import brand from "@/assets/project-brand.png";
+import shopify from "@/assets/project-shopify.png";
 
 const projects = [
   {
